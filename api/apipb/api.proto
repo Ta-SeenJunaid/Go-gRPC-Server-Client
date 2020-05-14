@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+
+package api;
+option go_package = "apipb";
+
+message apiRequest {
+    string name =1;
+}
+
+message apiResponse {
+    string greeting =1;
+}
+
+service apiService {
+    rpc Api(apiRequest) returns (apiResponse) {};
+}
